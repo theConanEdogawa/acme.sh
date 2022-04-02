@@ -54,6 +54,7 @@ dns_huaweicloud_add() {
   fi
 
   # Do saving work if all succeeded
+  _saveaccountconf_mutable HUAWEICLOUD_Tenant "${HUAWEICLOUD_Tenant}"
   _saveaccountconf_mutable HUAWEICLOUD_Username "${HUAWEICLOUD_Username}"
   _saveaccountconf_mutable HUAWEICLOUD_Password "${HUAWEICLOUD_Password}"
   _saveaccountconf_mutable HUAWEICLOUD_ProjectID "${HUAWEICLOUD_ProjectID}"
