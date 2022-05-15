@@ -25,7 +25,7 @@ dns_huaweicloud_add() {
   HUAWEICLOUD_ProjectID="${HUAWEICLOUD_ProjectID:-$(_readaccountconf_mutable HUAWEICLOUD_ProjectID)}"
 
   # Check information
-  if [ [ -z "${HUAWEICLOUD_Tenant}" ] || [ -z "${HUAWEICLOUD_Username}" ] || [ -z "${HUAWEICLOUD_Password}" ] || [ -z "${HUAWEICLOUD_ProjectID}" ]; then
+  if [ -z "${HUAWEICLOUD_Tenant}" ] || [ -z "${HUAWEICLOUD_Username}" ] || [ -z "${HUAWEICLOUD_Password}" ] || [ -z "${HUAWEICLOUD_ProjectID}" ]; then
     _err "Not enough information provided to dns_huaweicloud!"
     return 1
   fi
